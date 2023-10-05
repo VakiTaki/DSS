@@ -1,4 +1,73 @@
-body {
-  background-color: $bg;
-  color: $text;
+.dialog-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  background-color: #fff;
+  max-height: 500px;
+  max-width: 350px;
+  height: 100%;
+
+  &__header {
+    background-color: #ddd;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header-title-container {
+    width: 66%;
+  }
+
+  &__header-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__header-button {
+    width: 33%;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  &__content {
+    display: flex;
+    max-height: 70%;
+  }
+
+  &__content-block {
+    &_left {
+      width: 30%;
+      border-right: 1px solid #ccc;
+    }
+
+    &_right {
+      width: 70%;
+      overflow-y: scroll;
+    }
+  }
+
+  &__footer {
+    background-color: #ddd;
+    text-align: center;
+    word-wrap: break-word;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
 }
